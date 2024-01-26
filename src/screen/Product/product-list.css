@@ -1,0 +1,114 @@
+.product-card-list {
+  padding-inline: 1em;
+  padding-block: 1em;
+}
+
+.filter-col {
+  width: 20% !important;
+}
+.product-list-col {
+  width: 80% !important;
+}
+
+.brand-search-input {
+  width: 100%;
+  height: 2.5em;
+  border: 1px solid grey;
+  border-radius: 0.5em;
+  padding-inline: 0.5em;
+  margin-block: 0.5em;
+}
+.brand-search-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.filter-col .form-check-input[type="checkbox"] {
+  border-color: grey;
+  border-radius: 0;
+  border-width: 2px;
+}
+
+.filter-col .price-checkbox .form-check-input[type="checkbox"] {
+  border-color: grey;
+
+  border-radius: 50%;
+  border-width: 2px;
+}
+.filter-col .price-checkbox .form-check-input[type="checkbox"]:checked {
+  border-color: grey;
+
+  border-radius: 50%;
+  border-width: 2px;
+}
+.filter-col .form-check-input[type="checkbox"]:checked {
+  border-color: black;
+  border-radius: 0;
+  border-width: 2px;
+  outline: none;
+  box-shadow: none;
+  background-color: red;
+}
+.filter-col .form-check-input[type="checkbox"]:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/*check mark for checkbox*/
+.filter-col .form-check-input[type="checkbox"]:checked::after {
+  color: black;
+}
+
+.brand-badge {
+  padding-block: 0.5em !important;
+  text-align: center;
+}
+.mobile-filter {
+  display: none;
+}
+
+/*media query for mobile*/
+@media screen and (max-width: 767px) and (min-width: 370px) {
+  .product-card-list {
+    width: 49%;
+    padding-inline: 0.5em;
+    padding-block: 0.5em;
+  }
+  .filter-col {
+    display: none;
+  }
+  .mobile-filter {
+    display: block;
+  }
+
+  .product-list-col {
+    width: 100% !important;
+    margin-inline: 1em !important;
+  }
+}
+
+/*media query for mobile*/
+@media screen and (max-width: 1120px) {
+  .filter-col {
+    display: none;
+  }
+
+  .product-list-col {
+    width: 100% !important;
+    padding-inline: 1em !important;
+  }
+  .mobile-filter {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .product-card-list {
+    width: 100%;
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+  }
+  .product-list-col {
+    width: 100% !important;
+  }
+}

@@ -1,0 +1,32 @@
+.product-card-img {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+}
+.product-card-title {
+  height: 2em;
+}
+
+@media screen and (max-width: 1120px) {
+  .product-card-title {
+    font-size: 1rem;
+    height: 2em;
+  }
+}
+/*media query for mobile*/
+@media screen and (max-width: 767px) {
+  .product-card-img {
+    width: 5rem;
+    height: 5rem;
+  }
+  .product-card-title {
+    font-size: 0.9rem;
+    height: 2em;
+  }
+  .product-card-price {
+    font-size: 0.8rem;
+  }
+  .product-card-button {
+    font-size: 0.8rem;
+  }
+}

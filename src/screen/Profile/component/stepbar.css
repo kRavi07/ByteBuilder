@@ -1,0 +1,58 @@
+.ant-steps-item-title {
+  color: wheat !important;
+  margin-top: 5px;
+}
+
+.ant-steps
+  .ant-steps-item-finish
+  .ant-steps-item-icon
+  > .ant-steps-icon
+  .ant-steps-icon-dot {
+  background: #e07c24 !important;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+
+.ant-steps
+  .ant-steps-item-process
+  .ant-steps-item-icon
+  > .ant-steps-icon
+  .ant-steps-icon-dot {
+  background: #38cc77 !important;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+
+.ant-steps
+  .ant-steps-item-wait
+  .ant-steps-item-icon
+  > .ant-steps-icon
+  .ant-steps-icon-dot {
+  background: white !important;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+.ant-steps-item-description {
+  color: white !important;
+}
+
+.ant-steps-item-finish
+  .ant-steps-item-container
+  .ant-steps-item-process
+  .ant-steps-item-tail::after {
+  background-color: white !important;
+}
+
+.ant-steps-item-tail::after {
+  background-color: white !important;
+}
+
+/*media query for mobile*/
+@media only screen and (max-width: 860px) {
+  .stepbar {
+    margin-left: 10%;
+  }
+}

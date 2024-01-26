@@ -1,0 +1,33 @@
+.profileNavLink {
+  color: white;
+  text-decoration: none;
+  margin-inline: 1.2em;
+  margin-block-start: 0.5em;
+}
+.profileNavLink-active {
+  color: red;
+
+  margin-inline: 1.2em;
+  font-weight: 700;
+  margin-block-start: 0.5em;
+
+  text-decoration: none;
+}
+
+#profileMenu {
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 1.1em;
+}
+.main-nav {
+  padding-inline: 1.1em;
+}
+
+/*media query for mobile*/
+@media only screen and (max-width: 860px) {
+  #profileMenu {
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+  }
+}

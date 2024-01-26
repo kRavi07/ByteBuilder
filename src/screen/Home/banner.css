@@ -1,0 +1,26 @@
+.banner-text {
+  position: relative;
+  background-color: rgba(57, 57, 57, 0.5);
+
+  margin-top: 4em;
+
+  height: 20em;
+
+  width: 10em;
+
+  display: flex;
+
+  margin-left: 2em;
+  justify-content: start;
+  align-items: center;
+
+  inset: 0;
+}
+
+/*media query for mobile*/
+@media only screen and (max-width: 600px) {
+  .banner-text {
+    margin-top: 0;
+    height: 10em;
+  }
+}

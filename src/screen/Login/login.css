@@ -1,0 +1,16 @@
+.login-input {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white !important;
+}
+
+.login-input:focus {
+  outline: none;
+  border: 2px solid black;
+  background-color: transparent;
+  color: white;
+  box-shadow: none;
+}
+.login-input::placeholder {
+  color: white;
+}

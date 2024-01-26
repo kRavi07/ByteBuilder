@@ -1,0 +1,17 @@
+.navLink {
+  color: white;
+  font-size: 1em;
+}
+
+.socialLink {
+  color: white;
+  font-size: 2em;
+}
+
+.navLink:hover {
+  color: #d93b34;
+}
+
+.socialLink:hover {
+  color: #d93b34;
+}

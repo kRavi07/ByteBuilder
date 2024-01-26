@@ -1,0 +1,63 @@
+.search-box {
+  width: 15em; /* set the initial width of the search box */
+  transition: width 0.5s ease-in-out;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #777;
+  transition: opacity 0.5s ease-in-out; /* add a transition to the search icon */
+}
+
+.search-box:hover .search-input {
+  opacity: 1; /* show the input field on hover */
+}
+
+.search-input:focus {
+  outline: none;
+  border: 1px solid black;
+}
+
+.search-input .react-autosuggest__input {
+  width: 100%;
+
+  border: 1px solid #ccc;
+  background-color: transparent !important;
+  padding: 0;
+  font-size: 16px;
+
+  padding-inline: 1em;
+  padding-block: 0.5em;
+  outline: none;
+
+  color: white;
+  border-radius: 5px;
+}
+.search-input .react-autosuggest__suggestions-container {
+  background: grey;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  max-height: 300px;
+
+  width: 15.2em;
+
+  position: absolute;
+  z-index: 1000;
+  border: none;
+}
+.search-input .react-autosuggest__suggestions-list {
+  list-style: none;
+  color: black !important;
+}
+
+.search-input .react-autosuggest__suggestion {
+  color: black !important;
+  padding-block: 0.5em;
+  cursor: pointer;
+}
+.search-input .react-autosuggest__input--open {
+}

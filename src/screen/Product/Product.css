@@ -1,0 +1,16 @@
+.product-image {
+  display: flex;
+  align-items: center;
+}
+
+.product-pricing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.add-to-cart-button {
+  background-color: #d93b34;
+  color: white;
+  width: "40%";
+}
