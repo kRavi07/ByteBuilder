@@ -1,7 +1,13 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { getAuthToken } from "../Util/getAuthToken";
 export const api = createApi({
-  baseQuery: fetchBaseQuery({ baseUrl: "http://192.168.29.62:5000/api" }), // Replace with your API base URL
+  baseQuery: fetchBaseQuery({
+    baseUrl: "http://192.168.29.62:5000/api",
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }), // Replace with your API base URL
   endpoints: (builder) => ({
     signup: builder.mutation({
       query: (credentials) => ({
@@ -32,9 +38,6 @@ export const api = createApi({
         url: "/addProductToCart",
         method: "POST",
         body: items,
-        headers: {
-          Authorization: `Bearer ${getAuthToken()}`,
-        },
       }),
     }),
 
@@ -42,9 +45,6 @@ export const api = createApi({
       query: () => ({
         url: "/getCartItems",
         method: "GET",
-        headers: {
-          Authorization: `Bearer ${getAuthToken()}`,
-        },
       }),
     }),
 
@@ -52,9 +52,7 @@ export const api = createApi({
       query: () => ({
         url: "/getCartQuantity",
         method: "GET",
-        headers: {
-          Authorization: `Bearer ${getAuthToken()}`,
-        },
+        credentials: "include",
       }),
     }),
 
@@ -62,9 +60,6 @@ export const api = createApi({
       query: () => ({
         url: "/getAddress",
         method: "GET",
-        headers: {
-          Authorization: `Bearer ${getAuthToken()}`,
-        },
       }),
     }),
 
@@ -73,9 +68,6 @@ export const api = createApi({
         url: "/addAddress",
         method: "POST",
         body: address,
-        headers: {
-          Authorization: `Bearer ${getAuthToken()}`,
-        },
       }),
     }),
 
@@ -84,9 +76,6 @@ export const api = createApi({
         url: `/updateAddress/${address._id}`,
         method: "POST",
         body: address,
-        headers: {
-          Authorization: `Bearer ${getAuthToken()}`,
-        },
       }),
     }),
 
@@ -94,9 +83,6 @@ export const api = createApi({
       query: (id) => ({
         url: `/deleteAddress/${id}`,
         method: "DELETE",
-        headers: {
-          Authorization: `Bearer ${getAuthToken()}`,
-        },
       }),
     }),
 
@@ -104,9 +90,6 @@ export const api = createApi({
       query: () => ({
         url: "/getWishlist",
         method: "GET",
-        headers: {
-          Authorization: `Bearer ${getAuthToken()}`,
-        },
       }),
     }),
 
@@ -115,18 +98,12 @@ export const api = createApi({
         url: "/addWishlist",
         method: "POST",
         body: product,
-        headers: {
-          Authorization: `Bearer ${getAuthToken()}`,
-        },
       }),
     }),
     removeProductFromWishlist: builder.mutation({
       query: (id) => ({
         url: `/removeFromWishlist/${id}`,
         method: "DELETE",
-        headers: {
-          Authorization: `Bearer ${getAuthToken()}`,
-        },
       }),
       onSuccess: (api) => {
         api.invalidateQueries("getWishlist"); // Replace with your query key
