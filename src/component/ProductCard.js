@@ -69,8 +69,7 @@ const ProductCard = ({ data }) => {
   };
 
   const onAddToCart = async () => {
-    if (auth.isAuthenticated && auth.token) {
-      console.log(localStorage.getItem("user-token"));
+    if (auth.isAuthenticated) {
       onAddToCartForUser();
     } else {
       handleAddToCartForGuest();
